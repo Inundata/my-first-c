@@ -1,0 +1,6 @@
+﻿  fifth.c
+D:\OneDrive\Develop\my-first-c\1. lecture\fifth\fifth\fifth.c(259,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': 매크로 재정의
+  D:\OneDrive\Develop\my-first-c\1. lecture\fifth\fifth\fifth.c(259,1):
+  이전에 명령줄에서 선언된 '_CRT_SECURE_NO_WARNINGS'
+  
+  fifth.vcxproj -> D:\OneDrive\Develop\my-first-c\1. lecture\fifth\x64\Debug\fifth.exe
