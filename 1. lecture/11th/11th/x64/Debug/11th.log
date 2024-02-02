@@ -1,0 +1,8 @@
+﻿  11th.c
+D:\OneDrive\Develop\my-first-c\1. lecture\11th\11th\11th.c(1200,9): warning C4778: 'printf' : 서식 문자열 '%\n'이(가) 종결되지 않았습니다.
+D:\OneDrive\Develop\my-first-c\1. lecture\11th\11th\11th.c(1088,11): warning C4101: 's2' :참조되지 않은 지역 변수입니다.
+D:\OneDrive\Develop\my-first-c\1. lecture\11th\11th\11th.c(1088,23): warning C4101: 's5' :참조되지 않은 지역 변수입니다.
+D:\OneDrive\Develop\my-first-c\1. lecture\11th\11th\11th.c(1088,7): warning C4101: 's1' :참조되지 않은 지역 변수입니다.
+D:\OneDrive\Develop\my-first-c\1. lecture\11th\11th\11th.c(1088,15): warning C4101: 's3' :참조되지 않은 지역 변수입니다.
+D:\OneDrive\Develop\my-first-c\1. lecture\11th\11th\11th.c(1088,19): warning C4101: 's4' :참조되지 않은 지역 변수입니다.
+  11th.vcxproj -> D:\OneDrive\Develop\my-first-c\1. lecture\11th\x64\Debug\11th.exe
