@@ -514,20 +514,652 @@
 //	return 0;
 //}
 
+//#include <stdio.h>
+//
+//#pragma pack(push, 1)
+//
+//struct Packet {
+//	short length;
+//	int seq;
+//};
+//
+//#pragma pack(pop)
+//int main()
+//{
+//	struct Packet pkt;
+//	printf("%d\n", sizeof(pkt));
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//struct EncryptionHeader {
+//	char flags;
+//	int numbers;
+//	short shorts;
+//};
+//
+//int main()
+//{
+//	struct EncryptionHeader header;
+//
+//	printf("%d\n", sizeof(header));
+//
+//	return 0;
+//}
+//
+//#include <stdio.h>
+//
+//#pragma pack (push, 1)
+//
+//struct Packet
+//{
+//	char char1;
+//	char char2;
+//	char char3;
+//};
+//
+//#pragma pack(pop)
+//
+//int main()
+//{
+//	struct Packet pkt;
+//	printf("%d\n", sizeof(pkt));
+//
+//	return 0;
+//}
+
+/* 52강  */
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//struct Point2D {
+//	int x;
+//	int y;
+//};
+//
+//int main()
+//{
+//	struct Point2D p1;
+//
+//	memset(&p1, 0, sizeof(p1));
+//
+//	printf("%d %d\n", p1.x, p1.y);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//struct Point2D
+//{
+//	int x;
+//	int y;
+//};
+//
+//int main()
+//{
+//	struct Point2D* p1 = malloc(sizeof(struct Point2D));
+//
+//	memset(p1, 0, sizeof(struct Point2D));
+//
+//	printf("%d %d\n", p1->x, p1->y);
+//
+//	free(p1);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <string.h>
+//
+//struct Point2D
+//{
+//	int x;
+//	int y;
+//};
+//
+//int main()
+//{
+//	struct Point2D p1;
+//	struct Point2D p2;
+//
+//	p1.x = 10;
+//	p1.y = 20;
+//
+//	memcpy(&p2, &p1, sizeof(struct Point2D));
+//
+//	printf("%d %d\n", p2.x, p2.y);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//struct Point2D
+//{
+//	int x;
+//	int y;
+//};
+//
+//int main()
+//{
+//	struct Point2D* p1 = malloc(sizeof(struct Point2D));
+//	struct Point2D* p2 = malloc(sizeof(struct Point2D));
+//
+//	p1->x = 10;
+//	p1->y = 20;
+//
+//	memcpy(p2, p1, sizeof(struct Point2D));
+//
+//	printf("%d %d\n", p2->x, p2->y);
+//
+//	free(p2);
+//	free(p1);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//struct Point2D
+//{
+//	int x;
+//	int y;
+//};
+//
+//int main()
+//{
+//	struct Point2D p;
+//	struct Point2D* ptr = malloc(sizeof(struct Point2D));
+//
+//	memset(&p, 0, sizeof(struct Point2D));
+//	memset(ptr, 0, sizeof(struct Point2D));
+//
+//	printf("%d %d %d %d\n", p.x, p.y, ptr->x, ptr->y);
+//
+//	free(ptr);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//struct Point2D
+//{
+//	int x;
+//	int y;
+//};
+//
+//int main()
+//{
+//	struct Point2D p1;
+//	struct Point2D* p2 = malloc(sizeof(struct Point2D));
+//
+//	p1.x = 10;
+//	p1.y = 20;
+//
+//	memcpy(p2, &p1, sizeof(struct Point2D));
+//
+//	printf("%d %d\n", p2->x, p2->y);
+//
+//	free(p2);
+//
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <string.h>
+//
+//struct Person
+//{
+//	char name[20];
+//	int age;
+//	char address[200];
+//};
+//
+//int main()
+//{
+//	struct Person p1;
+//
+//	strcpy(p1.name, "홍길동");
+//	p1.age = 30;
+//	strcpy(p1.address, "서울시 용산구 한남동");
+//
+//	memset(&p1, 0, sizeof(struct Person));
+//
+//	printf("이름: %s\n", p1.name);
+//	printf("나이: %d\n", p1.age);
+//	printf("주소: %s\n", p1.address);
+//
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//struct Person
+//{
+//	char name[20];
+//	int age;
+//	char address[100];
+//};
+//
+//int main()
+//{
+//	struct Person* p1 = malloc(sizeof(struct Person));
+//	struct Person p2;
+//
+//	strcpy(p1->name, "고길동");
+//	p1->age = 40;
+//	strcpy(p1->address, "서울시 용산구 한남동");
+//
+//	memcpy(&p2, p1, sizeof(struct Person));
+//
+//	printf("이름: %s\n", p2.name);
+//	printf("나이: %d\n", p2.age);
+//	printf("주소: %s\n", p2.address);
+//
+//	free(p1);
+//
+//	return 0;
+//}
+
+/*53강*/
+
+//#include <stdio.h>
+//
+//struct Point2D
+//{
+//	int x, y;
+//};
+//
+//int main()
+//{
+//	struct Point2D p[30];
+//
+//	p[0].x = 10;
+//	p[0].y = 20;
+//	p[1].x = 30;
+//	p[1].y = 40;
+//	p[2].x = 50;
+//	p[2].y = 60;
+//
+//	printf("%d %d\n", p[0].x, p[0].y);
+//	printf("%d %d\n", p[1].x, p[1].y);
+//	printf("%d %d\n", p[2].x, p[2].y);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//struct Point2D
+//{
+//	int x;
+//	int y;
+//};
+//
+//int main()
+//{
+//	struct Point2D* p[3];
+//
+//	for (int i = 0
+//		; i < sizeof(p) / sizeof(struct Point2D *)
+//		; i++)
+//	{
+//		p[i] = malloc(sizeof(struct Point2D));
+//	}
+//
+//	p[0]->x = 10;
+//	p[0]->y = 20;
+//	p[1]->x = 30;
+//	p[1]->y = 40;
+//	p[2]->x = 50;
+//	p[2]->y = 60;
+//
+//	printf("%d %d\n", p[0]->x, p[0]->y);
+//	printf("%d %d\n", p[1]->x, p[1]->y);
+//	printf("%d %d\n", p[2]->x, p[2]->y);
+//
+//	for (int i = 0
+//		; i < sizeof(struct Point2D) / sizeof(struct Point2D*)
+//		; i++)
+//	{
+//		free(p[i]);
+//	}
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//struct Point2D
+//{
+//	int x, y;
+//};
+//
+//int main()
+//{
+//	struct Point2D p[3];
+//
+//	p[0].x = 10;
+//	p[0].y = 20;
+//	p[1].x = 30;
+//	p[1].y = 40;
+//	p[2].x = 50;
+//	p[2].y = 60;
+//
+//	printf("%d %d\n", p[0].x, p[0].y);
+//	printf("%d %d\n", p[1].x, p[1].y);
+//	printf("%d %d\n", p[2].x, p[2].y);
+//
+//	return 0;
+//
+//}
+
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdlib.h>
+//
+//struct Person
+//{
+//	char name[20];
+//	int age;
+//	char address[100];
+//};
+//
+//int main()
+//{
+//	struct Person* p[3000];
+//
+//	for (int i = 0
+//		; i < sizeof(p) / sizeof(struct Person*)
+//		; i++)
+//	{
+//		p[i] = malloc(sizeof(struct Person));
+//		memset(p[i], 0, sizeof(struct Person));
+//	}
+//
+//	printf("%d\n", p[2000]->age);
+//
+//	for (int i = 0
+//		; i < sizeof(p) / sizeof(struct Person*)
+//		; i++)
+//	{
+//		free(p[i]);
+//	}
+//
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <math.h>
+//
+//struct Point2D
+//{
+//	int x;
+//	int y;
+//};
+//
+//int main()
+//{
+//	struct Point2D p[4];
+//	double length = 0.0f;
+//
+//	scanf("%d %d %d %d %d %d %d %d",
+//		&p[0].x, &p[0].y, &p[1].x, &p[1].y, &p[2].x, &p[2].y, &p[3].x, &p[3].y);
+//
+//	for (int i = 0; i < sizeof(p) / sizeof(struct Point2D) - 1; i++)
+//	{
+//		length += sqrt(pow((p[i].x - p[i + 1].x), 2) + pow((p[i].y - p[i + 1].y), 2));
+//	}
+//
+//	printf("%f\n", length);
+//	
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//struct Person
+//{
+//	char name[30];
+//	int age;
+//};
+//
+//int main()
+//{
+//	struct Person* p[5];
+//
+//	for (int i = 0; i < sizeof(p) / sizeof(struct Person*); i++)
+//	{
+//		p[i] = malloc(sizeof(struct Person));
+//	}
+//
+//	scanf("%s %d %s %d %s %d %s %d %s %d",
+//		&p[0]->name, &p[0]->age,
+//		&p[1]->name, &p[1]->age,
+//		&p[2]->name, &p[2]->age,
+//		&p[3]->name, &p[3]->age,
+//		&p[4]->name, &p[4]->age);
+//
+//	int max_age = 0;
+//	int max_age_index = 0;
+//
+//	for (int i = 0; i < sizeof(p) / sizeof(struct Person*); i++)
+//	{
+//		if (max_age < p[i]->age)
+//		{
+//			max_age = p[i]->age;
+//			max_age_index = i;
+//		}
+//	}
+//
+//	printf("%s", &p[max_age_index]->name);
+//
+//	for (int i = 0; i < sizeof(p) / sizeof(struct Person*); i++)
+//	{
+//		free(p[i]);
+//	}
+//
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <string.h>
+//
+//union Box
+//{
+//	short candy;
+//	float snack;
+//	char doll[8];
+//};
+//
+//int main()
+//{
+//	union Box b1;
+//	printf("%d\n", sizeof(b1));
+//
+//	strcpy(b1.doll, "bear");
+//
+//	printf("%d\n", b1.candy);
+//	printf("%f\n", b1.snack);
+//	printf("%s\n", b1.doll);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//union Data
+//{
+//	char c1;
+//	short num1;
+//	int num2;
+//};
+//
+//int main()
+//{
+//	union Data d1;
+//	d1.num2 = 0x12345678;
+//
+//	printf("0x%x\n", d1.num2);
+//	printf("0x%x\n", d1.num1);
+//	printf("0x%x\n", d1.c1);
+//
+//	printf("%d\n", sizeof(d1));
+//
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+//
+//union Box {
+//	short candy;
+//	float snack;
+//	char doll[8];
+//};
+//
+//int main()
+//{
+//	union Box* b1 = malloc(sizeof(union Box));
+//
+//	printf("%d\n", sizeof(union Box));
+//
+//	strcpy(b1->doll, "bear");
+//
+//	printf("%d\n", b1->candy);
+//	printf("%f\n", b1->snack);
+//	printf("%s\n", b1->doll);
+//
+//	free(b1);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//union Data
+//{
+//	char c1;
+//	short num1;
+//};
+//
+//int main()
+//{
+//	union Data d1;
+//	d1.num1 = 0x5678;
+//
+//	printf("0x%x 0x%x\n", d1.num1, d1.c1);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//union Data
+//{
+//	short num1;
+//	int num2;
+//};
+//
+//int main()
+//{
+//	union Data* d1 = malloc(sizeof(union Data));
+//
+//	d1->num2 = 1;
+//
+//	printf("%d %d\n", d1->num1, d1->num2);
+//
+//	free(d1);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//
+//union Data
+//{
+//	char c1;
+//	int num1;
+//};
+//
+//int main()
+//{
+//	union Data d1;
+//	d1.num1 = 0x1111;
+//
+//	printf("0x%x %d\n", d1.c1, sizeof(d1));
+//	
+//	return 0;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//union Data
+//{
+//	short num1;
+//	int num2;
+//};
+//
+//int main()
+//{
+//	union Data* d1 = malloc(sizeof(union Data));
+//
+//	d1->num2 = 0x11111111;
+//
+//	printf("0x%x 0x%x\n", d1->num1, d1->num2);
+//	free(d1);
+//
+//	return 0;
+//}
+
 #include <stdio.h>
 
-#pragma pack(push, 1)
-
-struct Packet {
-	short length;
-	int seq;
+struct Phone
+{
+	int areacode;
+	unsigned long long number;
 };
 
-#pragma pack(pop)
+struct Person
+{
+	char name[20];
+	int age;
+	struct Phone phone;
+};
+
 int main()
 {
-	struct Packet pkt;
-	printf("%d\n", sizeof(pkt));
+	struct Person p1;
+	p1.phone.areacode = 82;
+	p1.phone.number = 3045671234;
+
+	printf("%d %llu\n", p1.phone.areacode, p1.phone.number);
 
 	return 0;
 }
